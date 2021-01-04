@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Personagens do RPG</h1>
+    {% for item in all %}
+        <strong>{{ item.nome }}</strong><br/>
+        Nível: {{ item.nivel }}<br/>
+        Raça: {{ item.raca }}<br/>
+        Vida: {{ item.vida }}<br/>
+        Mana: {{ item.mana }}<br/>
+        Poder: {{ item.poder }}<br/>
+        Dificuldade: {{ item.dificuldade }}<br/><br/>
+        <hr>
+
+    {% endfor %}
+{% endblock %}

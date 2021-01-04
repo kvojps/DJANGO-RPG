@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Descreva seu personagem:  </h1>
+    <br/><br/>
+
+    <form method="POST" action="{% url 'join' %}">
+    {% csrf_token %}
+        
+        <div class="mb-3">
+            <input type="text" class="form-control" aria-describedby="emailHelp"
+            placeholder="Nome" name="nome" value="{{ nome }}">
+        </div>
+        
+        <div class="mb-3">
+            <input type="text" class="form-control"  aria-describedby="emailHelp"
+            placeholder="Nível" name="nivel" value="{{ nivel }}">
+        </div>
+
+        <div class="mb-3">
+            <input type="text" class="form-control"  aria-describedby="emailHelp"
+            placeholder="Raça" name="raca" value="{{ raca }}">
+        </div>
+        
+        <div class="mb-3">
+            <input type="text" class="form-control"  aria-describedby="emailHelp"
+            placeholder="Vida" name="vida" value="{{ vida }}">
+        </div>
+
+        <div class="mb-3">
+            <input type="text" class="form-control"  aria-describedby="emailHelp"
+            placeholder="Mana" name="mana" value="{{ mana }}">
+        </div>
+
+        <div class="mb-3">
+            <input type="text" class="form-control"  aria-describedby="emailHelp"
+            placeholder="Poder" name="poder" value="{{ poder }}">
+        </div>
+
+        <div class="mb-3">
+            <input type="text" class="form-control"  aria-describedby="emailHelp"
+            placeholder="Dificuldade" name="dificuldade" value="{{ dificuldade }}">
+        </div>
+
+        <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Manter informações</label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Registrar-se</button>
+    </form>
+{% endblock %}
