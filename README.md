@@ -1,2 +1,2 @@
 # DJANGO-RPG
-No momento, uma pequena aplicação web voltada para criação de personagens e futuramente para as suas respectivas lutas.
+No momento, uma pequena aplicação web voltada para criação e registro de personagens no banco de dados.
